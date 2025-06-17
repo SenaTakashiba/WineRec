@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>あなたへのおすすめワイン</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <style>
+        body { font-family: sans-serif; margin: 0; background-color: #fffff9; }
+        .container { padding: 2em; }
+        .wine-card {
+            background-color: #fff9fc;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            max-width: 600;
+            width: 500px;
+            margin: 1.5em auto; /* カード間のマージン */
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden; /* clearfix */
+        }
+        .wine-card img {
+            max-width: 50px;
+            float: left;
+            margin-right: 16px;
+            border-radius: 4px;
+        }
+        .wine-card h3 {
+            margin-top: 10;
+            color: #800000;
+        }
+        .wine-card p {
+            color: #a52a2a;
+        }
+        h1, h2 { text-align: center; }
+        .back-link { display: block; text-align: center; margin-top: 2em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>あなたへのおすすめはこちら！</h1>
+    </div>
+    
+        {% if wines %}
+            {% for wine in wines %}
+            <article class="wine-card">
+                <img src="{{ wine.image_url }}" alt="{{ wine.name }}">
+                <div class="info"></div>
+                    <h3>{{ wine.name }}</h3>
+
+                    <p>{{ wine.description }}</p>
+
+                    <a href="{{ wine.page_url }}" class="details-link" target="_blank" rel="noopener noreferrer">商品ページはこちら</a>
+                </div>
+            </article>
+            {% endfor %}
+        {% else %}
+            <h2>ワインが見つかりませんでした。</h2>
+            <p style="text-align: center;">好みを再度入力してください。</p>
+        {% endif %}
+        <a href="/" class="back-link">別の好みで試す</a>
+    
+</body>
+</html>

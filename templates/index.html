@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ワインおすすめツール</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>理想のワインのイメージを<br>文章で入力してください</h1>
+
+        <form action="/" method="post" class="wine-form">
+            <textarea name="user_text" rows="5" placeholder="例：濃厚な肉料理に合う、力強くてフルーティーな赤ワインが好き"></textarea>
+            <button type="submit" class="submit-btn">おすすめのワインを探す</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+/* =================================== */
+/* index.html (入力フォームページ) のスタイル */
+/* =================================== */
+
+/* h1の改行(br)後のマージン調整 */
+h1 br {
+    display: block; /* 改行をブロック要素として扱う */
+    content: "";    /* 擬似要素の内容は空 */
+    margin-top: 0.5em; /* 改行後のマージン */
+}
+
+/* 入力フォームのスタイル */
+.wine-form {
+    background-color: #fff9fc;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* テキスト入力エリアのスタイル */
+.wine-form textarea {
+    width: 100%; /* 親要素の幅いっぱいに広げる */
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* paddingとborderを幅に含める */
+    margin-bottom: 20px;
+    resize: vertical; /* 縦方向のみリサイズ可能に */
+    line-height: 1.6;
+}
+
+/* 送信ボタンのスタイル */
+.submit-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #ff9e9e; /* 結果ページのワイン名と色を合わせる */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none; /* ボタンの枠線を消す */
+    border-radius: 5px;
+    cursor: pointer; /* マウスカーソルを指マークに */
+    transition: background-color 0.3s;
+}
+
+/* 送信ボタンにマウスカーソルを乗せたときのスタイル */
+.submit-btn:hover {
+    background-color: #ff7f7f; 
+}
+
+
+/*resultの方
+
+/* ページの背景や全体のフォントを設定 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    background-color: #fffff9; /* white背景色 */
+    color: #800000; /* 基本の文字色 */
+}
+
+/* ページ全体のコンテナ（余白などを管理） */
+.container {
+    max-width: 800px; /* 最大幅を指定 */
+    margin: 0 auto;   /* 中央揃え */
+    padding: 2em;     /* 内側の余白 */
+}
+
+/* ページの大見出し */
+h1 {
+    color: #2c3e50; /* 少し濃い青系の色 */
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+/* ワインカード全体のスタイル */
+.wine-card {
+    background-color: #fffafa; /* カードの背景はsnow */
+    border: 1px solid #f8f8ff; /* ghostwhiteの境界線 */
+    border-radius: 10px;       /* 角を丸くする */
+    padding: 20px;
+    margin-bottom: 2em;        /* カード下の余白 */
+    box-shadow: 0 4px 8px f5f5f5(0, 0, 0, 0.1); /* 影をつけて立体感を出す */
+    display: flex;             /* 画像とテキストを横並びにするため */
+    flex-direction: column;
+    align-items: center;       /* 縦方向の中央揃え */
+}
+
+/* =================================== */
+/* ワインカード内の商品リンクのスタイル   */
+/* =================================== */
+
+.details-link {
+    display: inline-block; /* ブロック要素のように振る舞いつつ、幅は内容に合わせる */
+    margin-top: 15px;      /* 上の説明文との間に余白を作る */
+    padding: 8px 16px;
+    color: #2c3e50;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.details-link:hover {
+    color: #409ecc;
+}
+
+/* ワインの説明文（pタグ） */
+.wine-card p {
+    line-height: 1.6; /* 行間を少し広げて読みやすくする */
+}
+
+/* 「別の好みで試す」リンクのスタイル */
+.back-link {
+    display: flex;
+    text-align: center;
+    flex: 20px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2em;
+    padding: 10px 20px;
+    background-color: #ff9e9e; /* papayawhipの背景色 */
+    color: #ffffff;              /* 文字はmidnightblue */
+    font-weight: bold;
+    text-decoration: none;     /* 下線を消す */
+    border-radius: 5px;
+    transition: background-color 0.3s; /* ホバー時の色変化を滑らかに */
+}
+
+/* リンクにマウスカーソルを乗せたときのスタイル */
+.back-link:hover {
+    background-color: #ff7f7f; /* moccasinに */
+}
