@@ -7,3 +7,5 @@ requests==2.32.3
 urllib==32.3.0
 transformers==4.51.3
 scipy==1.15.3
+torch==2.7.0
+scikit-learn==1.7.0
